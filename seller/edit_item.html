@@ -1,0 +1,54 @@
+<!-- templates/edit_items.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Items - Seller Panel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    .edit-container { max-width: 850px; margin: 40px auto; padding: 25px; background: #fffaf2; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .edit-container h2 { color: #5a3600; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e0c99d; }
+    th { background-color: #f4d7a1; color: #4d2e00; }
+    td input { padding: 6px; border: 1px solid #d6aa6f; border-radius: 6px; }
+    .btn-update { background: #a36400; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; }
+    .btn-update:hover { background: #7a4a00; }
+  </style>
+</head>
+<header>
+
+
+  <section class="edit-container">
+    <h2>Edit Your Store Items</h2>
+    <form action="/seller/update-items" method="POST">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price (₹)</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="name_{{ item.id }}" value="{{ item.name }}"></td>
+            <td><input type="number" name="price_{{ item.id }}" value="{{ item.price }}"></td>
+            <td>
+              <select name="category_{{ item.id }}">
+                <option value="grocery" {% if item.category == 'grocery' %}selected{% endif %}>Grocery</option>
+                <option value="medicine" {% if item.category == 'medicine' %}selected{% endif %}>Medicine</option>
+                <option value="restaurant" {% if item.category == 'restaurant' %}selected{% endif %}>Restaurant</option>
+              </select>
+            </td>
+            <td><button type="submit" name="update_id" value="{{ item.id }}" class="btn-update">Update</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </section>
+
+</header>
+</body>
+</html>

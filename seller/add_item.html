@@ -1,0 +1,46 @@
+<!-- templates/add_item.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Item - Seller Panel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    .seller-panel { max-width: 700px; margin: 40px auto; background: #fff6e5; padding: 30px; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.1); }
+    .seller-panel h2 { color: #6e4300; margin-bottom: 20px; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; color: #4d2e00; margin-bottom: 5px; }
+    .form-group input, .form-group select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cc9f63; background: #fff; }
+    .btn-submit { background: #b87700; color: #fff; padding: 12px 20px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+    .btn-submit:hover { background: #8c6100; }
+  </style>
+</head>
+<body>
+<header>
+
+  <section class="seller-panel">
+    <h2>Add New Item</h2>
+    <form action="/seller/add-item" method="POST">
+      <div class="form-group">
+        <label for="item_name">Item Name</label>
+        <input type="text" name="item_name" id="item_name" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price (₹)</label>
+        <input type="number" name="price" id="price" required>
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select name="category" id="category" required>
+          <option value="grocery">Grocery</option>
+          <option value="medicine">Medicine</option>
+          <option value="restaurant">Restaurant</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-submit">Add Item</button>
+    </form>
+  </section>
+
+</header>
+</body>
+</html>

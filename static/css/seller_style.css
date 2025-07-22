@@ -1,0 +1,25 @@
+/* Seller Dashboard Styles */
+.seller-dashboard {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  background: linear-gradient(to bottom right, #ad8e63, #6b4e34);
+  color: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}

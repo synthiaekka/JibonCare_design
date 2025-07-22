@@ -1,0 +1,35 @@
+<!-- templates/orders.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Orders - Seller Panel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    .order-section { max-width: 900px; margin: 40px auto; background: #fffdf6; padding: 30px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .order-section h2 { color: #6a4500; margin-bottom: 25px; }
+    .order-card { background: #f9f2e4; margin-bottom: 18px; padding: 16px 22px; border-left: 5px solid #c88b00; border-radius: 10px; box-shadow: 0 2px 8px #00000011; }
+    .order-card h4 { margin: 0; color: #4b3000; }
+    .order-card p { margin: 5px 0; color: #614c1e; font-size: 14px; }
+    .order-status { margin-top: 10px; font-weight: bold; color: #a36400; }
+  </style>
+</head>
+<body>
+<header>
+  <section class="order-section">
+    <h2>Recent Orders</h2>
+   
+    <div class="order-card">
+      <h4>Order #{{ order.id }} - {{ order.customer_name }}</h4>
+      <p>Items: {{ order.items }}</p>
+      <p>Amount: ₹{{ order.total }}</p>
+      <p>Address: {{ order.address }}</p>
+      <p class="order-status">Status: {{ order.status }}</p>
+    </div>
+    
+    <p>No orders available currently.</p>
+    
+  </section>
+</header>
+</body>
+</html>

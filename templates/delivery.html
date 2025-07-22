@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery Dashboard - JibonCare</title>
+  <link rel="stylesheet" href="static/css/style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fffaf2;
+      color: #4d2e00;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #7a4a00;
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dashboard-title {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    .delivery-section {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #fef5e7;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .delivery-card {
+      border: 1px solid #e0c99d;
+      background: #fffefb;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(160, 100, 0, 0.1);
+    }
+    .delivery-card h3 {
+      margin-top: 0;
+      color: #5a3600;
+    }
+    .delivery-card p {
+      margin: 5px 0;
+    }
+    .btn-group {
+      margin-top: 15px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      margin-right: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+    .btn.pickup {
+      background-color: #f4d03f;
+      color: #4d2e00;
+    }
+    .btn.delivered {
+      background-color: #58d68d;
+      color: #fff;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="dashboard-title">Delivery Dashboard</div>
+    <div>
+      <span>Welcome, Delivery Partner</span> |
+      <a href="login.html" style="color:#fff;text-decoration:none;font-weight:600;">Logout</a>
+    </div>
+  </header>
+
+  <!-- MAIN DELIVERY SECTION -->
+  <section class="delivery-section">
+
+    <!-- STATIC MOCK DELIVERY CARD -->
+    <div class="delivery-card">
+      <h3>Order #12345</h3>
+      <p><strong>Customer:</strong> Rahul Sharma</p>
+      <p><strong>Address:</strong> House No. 101, Sector 12, Chandigarh</p>
+      <p><strong>Contact:</strong> +91 98765 43210</p>
+      <p><strong>Items:</strong> Milk, Bread, Eggs</p>
+      <p><strong>Status:</strong> Pending</p>
+      <div class="btn-group">
+        <button class="btn pickup">Picked Up</button>
+        <button class="btn delivered">Mark as Delivered</button>
+      </div>
+    </div>
+
+    <div class="delivery-card">
+      <h3>Order #12346</h3>
+      <p><strong>Customer:</strong> Anjali Verma</p>
+      <p><strong>Address:</strong> Flat 202, Green Apartments, Pune</p>
+      <p><strong>Contact:</strong> +91 91234 56789</p>
+      <p><strong>Items:</strong> Paracetamol, Cough Syrup</p>
+      <p><strong>Status:</strong> Picked Up</p>
+      <div class="btn-group">
+        <button class="btn delivered">Mark as Delivered</button>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>

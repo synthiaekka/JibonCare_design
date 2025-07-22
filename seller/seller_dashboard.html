@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Seller Dashboard - JibonCare</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fdf8f1;
+      color: #3e2f1c;
+    }
+
+    header {
+      background-color: #6b4f28;
+      color: #fff8e1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 30px;
+      box-shadow: 0 3px 12px #00000022;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff3c4;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 40px 5vw;
+    }
+
+    .dashboard-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .card {
+      flex: 1 1 300px;
+      background: #fffdf8;
+      border: 2px solid #d8c3a5;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 6px 20px #00000015;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 28px #00000022;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #5c4221;
+    }
+
+    .card p {
+      color: #6d4c41;
+    }
+
+    .btn {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #8e6f3e;
+      color: #fff8e1;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #6b4f28;
+    }
+
+    .orders {
+      margin-top: 50px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #e0cba8;
+    }
+
+    .orders h3 {
+      margin-bottom: 20px;
+      color: #4e342e;
+    }
+
+    footer {
+      margin-top: 60px;
+      background: #3e2f1c;
+      color: #fff8e1;
+      text-align: center;
+      padding: 15px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">JibonCare Seller</div>
+    <nav>
+      <a href="../seller/add_item.html">Add Item</a>
+      <a href="../seller/edit_item.html">Edit Items</a>
+      <a href="../seller/orders.html">Orders</a>
+      <a href="/logout">Logout</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:30px;">Welcome to your Seller Dashboard</h2>
+
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3>Add New Products</h3>
+        <p>Add fresh inventory to your online store in just a few clicks.</p>
+        <a class="btn" href="../seller/add_item.html">Go to Add Item</a>
+      </div>
+      <div class="card">
+        <h3>Edit Existing Items</h3>
+        <p>Update or remove products you’ve already added to your store.</p>
+        <a class="btn" href="../seller/edit_item.html">Go to Edit Items</a>
+      </div>
+    </div>
+
+    <div class="orders">
+      <h3>Recent Orders</h3>
+      <p>No recent orders to show. Once orders start coming in, you'll see them here with buyer details.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 JibonCare. Empowering local sellers with love 💛</p>
+  </footer>
+  
+</body>
+</html>
