@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - JibonCare</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fef9f1;
+    }
+
+    header, footer {
+      background-color: #443015;
+      color: #fafafa;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .nav-main {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-main a {
+      color: #fef9e7;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-main a:hover {
+      color: #ffdd99;
+    }
+
+    .about-hero {
+      background: linear-gradient(135deg, #443015, #7c5c33);
+      color: #fceabb;
+      text-align: center;
+      padding: 70px 20px 50px 20px;
+      text-shadow: 0 3px 10px #00000050;
+    }
+
+    .about-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .about-hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #fef9e7;
+    }
+
+    .about-content {
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-box {
+      max-width: 800px;
+      background: #fffdf5;
+      border-left: 6px solid #7c5c33;
+      border-radius: 10px;
+      padding: 30px 35px;
+      box-shadow: 0 6px 20px #00000020;
+    }
+
+    .about-box h2 {
+      color: #7c5c33;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .about-box p, .about-box ul {
+      color: #443015;
+      font-size: 1.05rem;
+      line-height: 1.7em;
+    }
+
+    .about-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .about-box ul li::before {
+      content: "🛍️ ";
+      margin-right: 8px;
+      color: #c69c6d;
+    }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fdd885;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      header, footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-main {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="../static/images/jiboncare_Logo.png" alt="JibonCare Logo">
+      <span>JibonCare</span>
+    </div>
+    <div class="nav-main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="grocery.html">Grocery</a>
+      <a href="medicine.html">Medicine</a>
+      <a href="restaurant.html">Restaurant</a>
+      <a href="login.html">Login</a>
+    </div>
+  </header>
+
+  <!-- About Hero -->
+  <section class="about-hero">
+    <h1>About JibonCare</h1>
+    <p>We’re not just a service — we’re your neighborhood’s heartbeat ❤️</p>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content">
+    <div class="about-box">
+      <h2>Who We Are</h2>
+      <p>
+        JibonCare is a community-driven platform bringing your essential needs — groceries, medicines, and meals — right to your doorstep. We connect you with your local trusted shops, empowering both customers and sellers in the most magical way possible.
+      </p>
+    </div>
+
+    <div class="about-box">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>✨ Trusted Local Sellers</li>
+        <li>✨ Fast and Reliable Service</li>
+        <li>✨ Beautifully Designed, User-Friendly Experience</li>
+        <li>✨ Simple. Secure. Smart.</li>
+      </ul>
+    </div>
+
+    <div class="about-box">
+      <h2>Our Vision</h2>
+      <p>
+        To become the bridge between tradition and technology — where modern convenience meets timeless trust. Every click you make supports a local store and makes your neighborhood stronger.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 JibonCare. Made with 🧡 for your neighborhood.</p>
+    <p>Contact: <a href="mailto:support@jiboncare.com">support@jiboncare.com</a></p>
+  </footer>
+
+</body>
+</html>
