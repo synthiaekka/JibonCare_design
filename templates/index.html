@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HaatXpress (Design Only)</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -47,31 +49,44 @@
       font-weight: 500;
     }
 
-    .dropdown {
-      position: relative;
-    }
+    /* Dropdown styling */
+.dropdown {
+  position: relative;
+}
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #A67B5B;
-      min-width: 160px;
-      top: 100%;
-      left: 0;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #7a5b3e;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
 
-    .dropdown-content a {
-      display: block;
-      padding: 10px;
-      color: white;
-      text-decoration: none;
-    }
+/* Hover effect */
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+.dropdown-content a:hover {
+  background-color: #c69e54;
+  color: #fafafa;
+  font-weight: bold;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
     .search-bar {
       display: flex;
@@ -215,14 +230,14 @@
     </div>
 
     <div class="nav-links">
-      <a href="#">Home</a>
+      <a href="index.html">Home</a>
       <a href="#">About</a>
       <div class="dropdown">
         <a href="#">Choose Store</a>
         <div class="dropdown-content">
-          <a href="#">Grocery</a>
-          <a href="#">Medicine</a>
-          <a href="#">Restaurant</a>
+          <a href="grocery.html">Grocery</a>
+          <a href="medicine.html">Medicine</a>
+          <a href="restaurant.html">Restaurant</a>
         </div>
       </div>
     </div>
@@ -279,12 +294,12 @@
     <div class="store-card">
       <img src="../static/images/spice.jpg" alt="Spice" />
       <h3>Spicy Bites</h3>
-      <p>Your favorite meals, on time</p>
+      <p>Your spices for every dish</p>
     </div>
     <div class="store-card">
       <img src="../static/images/hardware.jpg" alt="Hardware" />
       <h3>Spicy Bites</h3>
-      <p>Your favorite meals, on time</p>
+      <p>Your nut and bolt on time</p>
     </div>
   </div>
 
