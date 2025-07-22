@@ -276,31 +276,38 @@
 
   <!-- STORES -->
   <div class="store-section">
-    <div class="store-card">
-      <img src="../static/images/grocery.jpg" alt="Grocery Store" />
-      <h3>Grocery King</h3>
-      <p>Fresh veggies & daily needs</p>
-    </div>
-    <div class="store-card">
-      <img src="../static/images/pharmacy.jpg" alt="Pharmacy" />
-      <h3>Care Pharmacy</h3>
-      <p>Reliable medicines near you</p>
-    </div>
-    <div class="store-card">
-      <img src="../static/images/restaurant.jpg" alt="Restaurant" />
-      <h3>Spicy Bites</h3>
-      <p>Your favorite meals, on time</p>
-    </div>
-    <div class="store-card">
-      <img src="../static/images/spice.jpg" alt="Spice" />
-      <h3>Spicy Bites</h3>
-      <p>Your spices for every dish</p>
-    </div>
-    <div class="store-card">
-      <img src="../static/images/hardware.jpg" alt="Hardware" />
-      <h3>Spicy Bites</h3>
-      <p>Your nut and bolt on time</p>
-    </div>
+    
+    
+    <div class="store-card" onclick="goToStore('../templates/grocery.html')">
+  <img src="../static/images/grocery.jpg" alt="Store Image" />
+  <h3>FreshMart</h3><p>Your favorite grocery, on time</p>
+  <!-- Add to Cart Button (won't trigger card click) -->
+  <button class="add-cart-btn" onclick="event.stopPropagation(); addToCart('FreshMart - Grocery')">
+    <i class="fas fa-cart-plus"></i> Add
+  </button>
+</div>
+
+
+
+ <div class="store-card" onclick="goToStore('../templates/medicine.html')">
+  <img src="../static/images/pharmacy.jpg" alt="Store Image" />
+  <h3>Care Pharmacy</h3><p>Reliable medicines near you</p>
+  <!-- Add to Cart Button (won't trigger card click) -->
+  <button class="add-cart-btn" onclick="event.stopPropagation(); addToCart('FreshMart - Grocery')">
+    <i class="fas fa-cart-plus"></i> Add
+  </button>
+</div>
+
+    <div class="store-card" onclick="goToStore('../templates/restaurant.html')">
+  <img src="../static/images/restaurant.jpg" alt="Store Image" />
+  <h3>Spice Bites</h3><p>Your awesome meals on wheels</p>
+  <!-- Add to Cart Button (won't trigger card click) -->
+  <button class="add-cart-btn" onclick="event.stopPropagation(); addToCart('FreshMart - Grocery')">
+    <i class="fas fa-cart-plus"></i> Add
+  </button>
+</div>
+    
+    
   </div>
 
   <!-- FOOTER -->
@@ -310,3 +317,16 @@
   </footer>
 </body>
 </html>
+<script>
+  let cartItems = [];
+
+  function addToCart(itemName) {
+    cartItems.push(itemName);
+    document.getElementById("cart-count").innerText = cartItems.length;
+    alert(`🛒 '${itemName}' added to cart!`);
+  }
+
+  function goToStore(page) {
+    window.location.href = page;
+  }
+</script>

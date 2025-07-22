@@ -271,6 +271,29 @@ header {
   color: #6e4f33;
 }
 
+.add-cart-btn {
+  margin-top: 10px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  background: #ae3e63;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 3px 8px #0002;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-cart-btn:hover {
+  background: #6a8973;
+  transform: scale(1.05);
+}
+
+
 /* FOOTER */
 footer {
   background-color: #3e2f1c;
