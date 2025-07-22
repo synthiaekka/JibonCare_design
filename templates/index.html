@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HaatXpress (Design Only)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #FAF3E0;
+      margin: 0;
+      padding: 0;
+      color: #2E1F0F;
+    }
+
+    header {
+      background-color: #5A3E2B;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #FFF8E7;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #A67B5B;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input {
+      padding: 8px 12px;
+      border-radius: 10px 0 0 10px;
+      border: none;
+      font-size: 14px;
+    }
+
+    .search-bar button {
+      padding: 8px 12px;
+      background-color: #D4AF37;
+      color: white;
+      border: none;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+    }
+
+    .login-link-btn {
+  margin-left: 12px;
+  padding: 8px 16px;
+  background-color: #a8894b; /* goldenish */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.login-link-btn:hover {
+  background-color: #866634; /* deeper brownish gold */
+}
+
+.cart-btn {
+  position: relative;
+  background-color: #a8894b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+.cart-btn:hover {
+  background-color: #866634;
+}
+
+.cart-btn i {
+  font-size: 18px;
+}
+
+#cart-count {
+  background: #fff;
+  color: #a8894b;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 38px 20px;
+      background: #EEE3D0;
+    }
+
+    .hero h2 {
+      font-size: 2.4rem;
+      color: #5A3E2B;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .store-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 3vw;
+      gap: 33px;
+    }
+
+    .store-card {
+      background-color: #FFF7EA;
+      color: #2E1F0F;
+      padding: 20px;
+      border-radius: 14px;
+      width: 240px;
+      box-shadow: 0 4px 15px #B38B6D33;
+      text-align: center;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      cursor: pointer;
+    }
+
+    .store-card:hover {
+      background-color: #F5E6C2;
+      transform: translateY(-5px);
+    }
+
+    .store-card img {
+      width: 64px;
+      height: 64px;
+      margin: 8px auto 14px auto;
+      display: block;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 3px 10px #B38B6D66;
+    }
+
+    footer {
+      background-color: #2E1F0F;
+      color: #FAF3E0;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="../static/images/jiboncare_Logo.png" alt="JibonCare Logo" />
+      <!--<span style="font-size: 1.2em; font-weight: bold;">HaatXpress</span>-->
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <div class="dropdown">
+        <a href="#">Choose Store</a>
+        <div class="dropdown-content">
+          <a href="#">Grocery</a>
+          <a href="#">Medicine</a>
+          <a href="#">Restaurant</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <!--<a href="/login" class="login-btn">Login</a>
+    <a href="/cart" class="cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </a>-->
+
+    <div class="auth-cart">
+  <div style="display:flex; align-items:center; gap:10px;">
+  <a href="login.html" class="login-link-btn">Login</a>
+  <a href="cart.html" class="cart-btn">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </a>
+</div>
+
+</div>
+
+
+
+  </header>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <h2>Welcome to JibonCare</h2>
+    <p>Connecting you to your local shops - groceries, medicines, and more, delivered with care and tradition.</p>
+  </div>
+
+  <!-- STORES -->
+  <div class="store-section">
+    <div class="store-card">
+      <img src="../static/images/grocery.jpg" alt="Grocery Store" />
+      <h3>Grocery King</h3>
+      <p>Fresh veggies & daily needs</p>
+    </div>
+    <div class="store-card">
+      <img src="../static/images/pharmacy.jpg" alt="Pharmacy" />
+      <h3>Care Pharmacy</h3>
+      <p>Reliable medicines near you</p>
+    </div>
+    <div class="store-card">
+      <img src="../static/images/restaurant.jpg" alt="Restaurant" />
+      <h3>Spicy Bites</h3>
+      <p>Your favorite meals, on time</p>
+    </div>
+    <div class="store-card">
+      <img src="../static/images/spice.jpg" alt="Spice" />
+      <h3>Spicy Bites</h3>
+      <p>Your favorite meals, on time</p>
+    </div>
+    <div class="store-card">
+      <img src="../static/images/hardware.jpg" alt="Hardware" />
+      <h3>Spicy Bites</h3>
+      <p>Your favorite meals, on time</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 HaatXpress. All rights reserved.</p>
+    <p>Design Trial Version</p>
+  </footer>
+</body>
+</html>
