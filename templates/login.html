@@ -28,7 +28,7 @@
     .login-container input[type="password"] {
       width: 100%;
       padding: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       border: 1px solid #caa969;
       border-radius: 6px;
       background: #fff9f0;
@@ -46,25 +46,26 @@
     .login-container button:hover {
       background-color: #6a4429;
     }
-    .register-link {
+    .links {
       text-align: center;
       margin-top: 18px;
     }
-    .register-link a {
+    .links a {
       color: #8c5c3a;
       text-decoration: none;
       font-weight: 500;
+      display: inline-block;
+      margin: 5px 0;
     }
-    .register-link a:hover {
+    .links a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
   <div class="login-container">
     <h2>Login to JibonCare</h2>
-    <form method="POST">
+    <form method="POST" action="{{ url_for('login') }}">
       <input type="email" name="email" placeholder="Email" required />
       <input type="password" name="password" placeholder="Password" required />
       <button type="submit">Login</button>
@@ -72,10 +73,11 @@
     {% if error %}
       <p style="color: red; text-align: center; margin-top: 10px;">{{ error }}</p>
     {% endif %}
-    <div class="register-link">
-      New user? <a href="register.html">Register here</a>
+
+    <div class="links">
+      <a href="{{ url_for('register') }}">New user? Register</a>
+      <a href="{{ url_for('forgot_password') }}">Forgot password?</a>
     </div>
   </div>
-
 </body>
 </html>

@@ -20,14 +20,14 @@
     
     <div class="nav-main">
       <div class="nav-links">
-        <a href="../templates/index.html">Home</a>
-        <a href="../templates/about.html">About</a>
+        <a href="{{ url_for('home') }}">Home</a>
+
         <div class="dropdown">
           <a href="#">Choose Store</a>
           <div class="dropdown-content">
-            <a href="grocery.html">Grocery</a>
-            <a href="medicine.html">Medicine</a>
-            <a href="restaurant.html">Restaurant</a>
+            <a href="{{ url_for('grocery') }}">Grocery</a>
+            <a href="{{ url_for('medicine') }}">Medicine</a>
+            <a href="{{ url_for('restaurant') }}">Restaurant</a>
           </div>
         </div>
       </div>

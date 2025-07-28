@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html>
 <head>
-  <meta charset="UTF-8" />
   <title>Register - JibonCare</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <style>
@@ -10,7 +9,7 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
     }
-    .register-container {
+    .container {
       max-width: 450px;
       margin: 100px auto;
       background: #fff7e6;
@@ -19,22 +18,20 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       border: 1px solid #d3a15d;
     }
-    .register-container h2 {
+    .container h2 {
       text-align: center;
       color: #5b3b1d;
       margin-bottom: 25px;
     }
-    .register-container input[type="text"],
-    .register-container input[type="email"],
-    .register-container input[type="password"] {
+    .container input, .container select {
       width: 100%;
       padding: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       border: 1px solid #caa969;
       border-radius: 6px;
       background: #fff9f0;
     }
-    .register-container button {
+    .container button {
       width: 100%;
       padding: 12px;
       background-color: #8c5c3a;
@@ -44,12 +41,12 @@
       font-weight: bold;
       cursor: pointer;
     }
-    .register-container button:hover {
+    .container button:hover {
       background-color: #6a4429;
     }
     .login-link {
       text-align: center;
-      margin-top: 18px;
+      margin-top: 15px;
     }
     .login-link a {
       color: #8c5c3a;
@@ -62,22 +59,36 @@
   </style>
 </head>
 <body>
-
-  <div class="register-container">
+  <div class="container">
     <h2>Create Account</h2>
-    <form method="POST">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="password" name="password" placeholder="Password" required />
+    <form method="POST" action="{{ url_for('register') }}" onsubmit="return validateForm()">
+      <input type="text" name="name" placeholder="Full Name" required
+             pattern="[A-Za-z\s]+" title="Only letters and spaces allowed">
+
+      <input type="text" name="phone" placeholder="Phone Number" required
+             pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
+
+      <input type="email" name="email" placeholder="Email" required>
+
+      <input type="password" name="password" placeholder="Password" required minlength="6">
+
       <button type="submit">Register</button>
     </form>
-    {% if error %}
-      <p style="color: red; text-align: center; margin-top: 10px;">{{ error }}</p>
-    {% endif %}
+
     <div class="login-link">
-      Already have an account? <a href="login.html">Login here</a>
+      Already registered? <a href="{{ url_for('login') }}">Login</a>
     </div>
   </div>
 
+  <script>
+    function validateForm() {
+      const phone = document.querySelector('input[name="phone"]').value;
+      if (phone.length !== 10 || isNaN(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return false;
+      }
+      return true;
+    }
+  </script>
 </body>
 </html>
